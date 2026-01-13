@@ -49,13 +49,6 @@ const Sidebar = ({ isOpen, onToggle }) => {
           </li>
           
           <li className="nav-item">
-            <NavLink to="/my-scores" className="nav-link">
-              <span className="nav-icon">🏆</span>
-              My Scores
-            </NavLink>
-          </li>
-          
-          <li className="nav-item">
             <NavLink to="/profile" className="nav-link">
               <span className="nav-icon">👤</span>
               Profile
@@ -73,16 +66,16 @@ const Sidebar = ({ isOpen, onToggle }) => {
               </li>
               
               <li className="nav-item">
-                <NavLink to="/admin/quizzes" className="nav-link">
-                  <span className="nav-icon">⚙️</span>
-                  Manage Quizzes
+                <NavLink to="/admin/dashboard" className="nav-link">
+                  <span className="nav-icon">📊</span>
+                  Admin Dashboard
                 </NavLink>
               </li>
               
               <li className="nav-item">
-                <NavLink to="/admin/users" className="nav-link">
-                  <span className="nav-icon">👥</span>
-                  Manage Users
+                <NavLink to="/admin/quizzes" className="nav-link">
+                  <span className="nav-icon">⚙️</span>
+                  Manage Quizzes
                 </NavLink>
               </li>
             </>

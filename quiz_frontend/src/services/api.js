@@ -175,4 +175,46 @@ export const questionsAPI = {
   },
 };
 
+// PUBLIC_INTERFACE
+export const adminAPI = {
+  /**
+   * Get admin dashboard statistics
+   */
+  getDashboardStats: async () => {
+    const response = await api.get('/admin/stats');
+    return response.data;
+  },
+
+  /**
+   * Get all users (admin only)
+   */
+  getUsers: async () => {
+    const response = await api.get('/admin/users');
+    return response.data;
+  },
+
+  /**
+   * Update user role (admin only)
+   */
+  updateUserRole: async (userId, role) => {
+    const response = await api.put(`/admin/users/${userId}`, { role });
+    return response.data;
+  },
+
+  /**
+   * Delete user (admin only)
+   */
+  deleteUser: async (userId) => {
+    await api.delete(`/admin/users/${userId}`);
+  },
+
+  /**
+   * Get quiz analytics (admin only)
+   */
+  getQuizAnalytics: async (quizId) => {
+    const response = await api.get(`/admin/quizzes/${quizId}/analytics`);
+    return response.data;
+  },
+};
+
 export default api;
